@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: roboto regular;
+}
+
+.container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 24rem 1fr;
+    grid-template-rows: 5.5rem 1fr;
+
+    @media (max-width: 1312px) {
+        grid-template-columns: 7rem 1fr;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}

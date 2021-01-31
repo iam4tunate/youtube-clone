@@ -1,0 +1,123 @@
+.header {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5.5rem;
+    // max-width: 100%;
+    grid-column: span 2;
+    grid-row: 1;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+
+    &-logo {
+        display: flex;
+        align-items: center;
+
+        &>sub{
+            font-size: 1rem;
+            color: #696969;
+            padding-left: .3rem;
+            margin-top: -1rem;
+            font-family: "roboto medium";
+        }
+
+        &>.youtube {
+            width: 8rem;
+            margin-left: 2.5rem;
+        }
+    }
+
+    &-right-items {
+        display: flex;
+        align-items: center;
+
+        >a {
+            position: relative;
+            display: flex;
+
+            &:not(:last-of-type) {
+                margin-right: 2.8rem;
+            }
+
+            >span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 4px;
+                top: -4px;
+                height: 1.8rem;
+                width: 1.8rem;
+                border-radius: 50%;
+                background-color: #cc0000;
+                font-size: 1rem;
+                color: $color-white;
+                font-family: roboto medium;
+                margin-right: -1rem;
+            }
+        }
+    }
+
+    &-user {
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 50%;
+    }
+}
+
+.search {
+    flex: 0 0 50%;
+    height: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: 1.6rem;
+        color: #000000;
+        padding-left: 1.5rem;
+        border: 1px solid #CCCCCC;
+        height: 100%;
+        width: 100%;
+        border-radius: 1px;
+
+        &:focus {
+            border: 1px solid #065fd4;
+        }
+
+        &::-webkit-input-placeholder {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12%;
+        height: 100%;
+        background-color: #f8f8f8;
+        border: 1px solid #CCCCCC;
+        cursor: pointer;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
+}
+
+#hamburger{
+    cursor: pointer;
+}

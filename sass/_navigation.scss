@@ -1,0 +1,163 @@
+.aside {
+    position: fixed;
+    top: 5.5rem;
+    left: 0;
+    bottom: 0;
+    width: 24rem;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    height: auto;
+    background-color: $color-white;
+    padding: 1.2rem 0;
+    overflow: hidden;
+    scrollbar-width: thin;
+
+    &-list-sm {
+        display: none;
+    }
+
+
+    &:hover {
+        overflow-Y: scroll;
+        scrollbar-width: thin;
+    }
+
+    &-icon {
+        margin-right: 2.5rem;
+    }
+
+    &-link {
+        padding: .8rem 0 .8rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.4rem;
+        color: #575757;
+        font-family: roboto medium;
+        width: 100%;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+
+    &-divider {
+        display: block;
+        width: 100%;
+        background-color: #e3e3e3;
+        height: 1px;
+        margin: 1.2rem 0;
+    }
+
+    &-title {
+        padding-left: 2.5rem;
+        text-transform: uppercase;
+        font-family: roboto medium;
+        font-size: 1.4rem;
+        color: #696969;
+        padding-bottom: 1rem;
+    }
+
+    &-img {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        margin-right: 2.5rem;
+    }
+
+    &-dot {
+        display: block;
+        width: 4px;
+        background-color: #409eff;
+        height: 4px;
+        border-radius: 50%;
+    }
+
+    &-footer {
+        padding: .8rem 0 .8rem 2.5rem;
+
+        &-row {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-of-type) {
+                padding-bottom: 1rem;
+            }
+
+
+            &>a {
+                color: #575757;
+                font-family: roboto medium;
+                font-size: 1.3rem;
+                font-weight: 500;
+
+                &:not(:last-of-type) {
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    background-color: #E5E5E5;
+    font-family: roboto medium;
+}
+
+.active2 {
+    &>span {
+        color: $color-red;
+        font-family: roboto medium;
+    }
+
+}
+
+@media screen and (max-width: 1312px) {
+    .aside {
+        width: 7rem;
+        position: fixed;
+        padding-top: 1.5rem;
+
+        &:hover {
+            overflow: hidden;
+        }
+
+        &-list-sm {
+            display: block;
+        }
+
+        &-list {
+            display: none;
+        }
+
+        &-icon {
+            margin-right: 0;
+            margin-bottom: .5rem;
+        }
+
+        &-link {
+            font-size: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.8rem 0;
+            color: #696969;
+
+            // &:not(:last-child) {
+            //     margin-bottom: 3.7rem;
+            // }
+        }
+
+        &-divider {
+            display: none;
+        }
+    }
+}
+
+.db {
+    display: block;
+}
+
+.dn {
+    display: none;
+}
